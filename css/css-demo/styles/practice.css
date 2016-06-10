@@ -10,3 +10,13 @@ section#contact-info {
 .accomplishments {
 	font-size: .8em;
 }
+
+/* The first letter of each paragraph will have a bold weight */
+p:first-letter {
+	font-weight: bold;
+}
+
+/* li within ul are font size 20px */
+ul > li {
+	font-size: 20px;
+}
