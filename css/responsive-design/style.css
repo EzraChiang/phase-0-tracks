@@ -51,4 +51,20 @@ figcaption {
   body {
     background-color: hotpink;
   }
+  h1 {
+    font-size: 20px; 
+  }
+  section {
+    padding-right: 10%;
+  }
+
+  blockquote {
+    text-align: center;
+    font-weight: bold;
+    border: solid;
+
+  }
+
+   
+
 }
