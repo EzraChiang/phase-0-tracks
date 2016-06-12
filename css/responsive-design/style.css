@@ -61,7 +61,7 @@ figcaption {
   blockquote {
     text-align: center;
     font-weight: bold;
-    border: solid;
+    border: solid; black; 
 
   }
 
