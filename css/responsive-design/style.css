@@ -12,6 +12,7 @@ body {
   width: 20%;
   display: inline-block;
   vertical-align: top;
+
 }
 
 main {
@@ -44,4 +45,10 @@ figure {
 figcaption {
   font-style: italic;
   text-align: right;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
 }
