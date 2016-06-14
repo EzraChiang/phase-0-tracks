@@ -11,4 +11,19 @@
 	- Push the number of a floor that is less than the floor that you are currently on.
 
 - Push the door close button.
-- Wait until you have arrived at your desired floor. 
+- Wait until you have arrived at your desired floor.
+
+ How to brush your teeth
+
+- Go to your bathroom sink.
+- Pick up your toothbrush and apply toothpaste to the head of the brush.
+- Put toothbrush inside of mouth.
+Until every tooth has been brushed:
+	- Brush the bottom left side of the mouth on all sides for thirty seconds. 
+	- Move to the right side of the mouth and brush all sides for thirty seconds.
+	- Move to the top right of the mouth and brush all sides for thirty seconds. 
+	- Move to the top left of the mouth and brush all sides for thirty seconds. 
+- Take out your toothbrush from mouth.
+- Spit out the toothpaste and rinse your mouth 3 times.
+- Wash the head of the toothbrush and put it away. 
+
