@@ -1,0 +1,14 @@
+- Move forward to the elevator.
+- If you want to go up:
+	- Push the up button.
+- Else if you want to go down:
+	- Push the down button
+- Wait until the doors open, then move inside the elevator. 
+
+- Once inside, If you want to go up:
+	- Push the number of a floor that is greater than the floor that you are currently on.
+- Else If you want to go down:
+	- Push the number of a floor that is less than the floor that you are currently on.
+
+- Push the door close button.
+- Wait until you have arrived at your desired floor. 
