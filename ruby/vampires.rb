@@ -11,7 +11,9 @@ birth_year = gets.chomp.to_i
 real_age = 2016 - birth_year
 if real_age == age
 	true_age = true
-else
+elsif real_age > age
+	true_age = false
+elsif real_age < age
 	true_age = false
 end
 
@@ -27,16 +29,15 @@ end
 
 puts "Would you like to enroll in the company's health insurance? (Yes/No)"
 insurance = gets.chomp
-case insurance 
-when "Yes"
+if insurance == "Yes"
 	insurance = true
-when "No"
+elsif insurance != "Yes"
 	insurance = false
 end
+
 
 if true_age && (garlic || insurance)
 	puts "Probably not a vampire"
 end
 
-if 
 
