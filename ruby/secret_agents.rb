@@ -15,3 +15,19 @@ end
 
 encrypt("abc")
 
+=begin
+Decryption Method
+1. Take each individual letter. Set each letter to one letter before it. Come out with a new string.	
+=end
+
+def decrypt(word)
+	index = 0 
+	alpha = "abcdefghijklmnopqrstuvwxyz"
+	new_word = ""
+while index < word.length
+	position = alpha.index(word[index]) - 1
+	new_word += alpha[position] 
+	index +=1
+end
+new_word
+end
