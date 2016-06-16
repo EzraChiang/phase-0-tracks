@@ -53,7 +53,9 @@ end
 end
 
 if input == "sunshine" then
-	next 
+	break if n <= 0
+	next
+	
 end
 
 
@@ -80,4 +82,6 @@ end
 puts Vampire
 break if n <= 0
 end 
+
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
 
