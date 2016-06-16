@@ -35,7 +35,13 @@ end
 new_word
 end
 
-encrypt("abc")
-encrypt("zed")
-decrypt("bcd")
-decrypt("afe")
+#puts encrypt("abc")
+#puts encrypt("zed")
+#puts decrypt("bcd")
+#puts decrypt("afe")
+
+#puts decrypt(encrypt("swordfish"))
+#This nested method call works because the two methods are defined individually instead of within each other.
+#The method will first encrypt "swordfish" as the first function and then decrypt the result as the second function.
+
+
