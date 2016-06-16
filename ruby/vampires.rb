@@ -19,25 +19,39 @@ end
 
 
 puts "Our company cafeteria serves garlic bread. Should we order some for you? (Yes/No)"
-garlic = gets.chomp 
-case garlic 
-when "Yes"
+garlic = gets.chomp.capitalize! 
+if garlic == "Yes"
 	garlic = true
-when "No"
-	garlic = false
+else
+	garlic = false 
 end
 
 puts "Would you like to enroll in the company's health insurance? (Yes/No)"
-insurance = gets.chomp
+insurance = gets.chomp.capitalize! 
 if insurance == "Yes"
 	insurance = true
-elsif insurance != "Yes"
+elsif 
+	insurance != "Yes"
 	insurance = false
 end
 
-
+Vampire = "Results inconclusive"
 if true_age && (garlic || insurance)
-	puts "Probably not a vampire"
+	Vampire = "Probably not a vampire"
 end
 
+if !true_age && (!garlic || !insurance)
+	Vampire = "Probably a vampire"
+end
 
+if !true_age && !garlic && !insurance
+	Vampire = "Almost certainly a vampire"
+end
+
+if name == "Drake Cula"
+	Vampire = "Definitely a vampire"
+elsif name == "Tu Fang"
+	Vampire = "Definitely a vampire"
+end
+
+puts Vampire
