@@ -35,6 +35,8 @@ elsif
 	insurance = false
 end
 
+n = 0 
+until n = 5
 Vampire = "Results inconclusive"
 if true_age && (garlic || insurance)
 	Vampire = "Probably not a vampire"
@@ -53,5 +55,8 @@ if name == "Drake Cula"
 elsif name == "Tu Fang"
 	Vampire = "Definitely a vampire"
 end
-
+n = += 1
 puts Vampire
+end 
+
+
