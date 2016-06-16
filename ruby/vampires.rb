@@ -1,9 +1,14 @@
+puts "How many employees will be processed?"
+number = gets.chomp.to_i
+
+n = number  
+loop do
+	n -= 1
 puts "What is your name?"
 name = gets.chomp
 
 puts "How old are you?"
 age = gets.chomp.to_i
-
 
 puts "What year were you born?"
 birth_year = gets.chomp.to_i
@@ -35,8 +40,24 @@ elsif
 	insurance = false
 end
 
-n = 0 
-until n = 5
+allergy = "done"
+input = ""
+
+while input != allergy
+puts "Name one of your allergies. Type done when finished."
+input = gets.chomp
+if input == "sunshine" then 
+	puts "Probably a vampire"
+	break 
+end
+end
+
+if input == "sunshine" then
+	next 
+end
+
+
+
 Vampire = "Results inconclusive"
 if true_age && (garlic || insurance)
 	Vampire = "Probably not a vampire"
@@ -55,8 +76,8 @@ if name == "Drake Cula"
 elsif name == "Tu Fang"
 	Vampire = "Definitely a vampire"
 end
-n = += 1
-puts Vampire
-end 
 
+puts Vampire
+break if n <= 0
+end 
 
