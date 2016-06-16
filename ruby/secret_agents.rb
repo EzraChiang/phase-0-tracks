@@ -44,4 +44,16 @@ end
 #This nested method call works because the two methods are defined individually instead of within each other.
 #The method will first encrypt "swordfish" as the first function and then decrypt the result as the second function.
 
+puts "Would you like to decrypt or encrypt a password?" 
+answer = gets.chomp
+
+if answer == "decrypt"
+	puts "May I have a password to decrypt?"
+	d_pass_word = gets.chomp
+	puts decrypt(d_pass_word)
+elsif answer == "encrypt"
+	puts "May I have a password to encrypt?"
+	e_pass_word = gets.chomp
+	puts encrypt(e_pass_word)
+end
 
