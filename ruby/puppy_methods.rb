@@ -20,6 +20,10 @@ class Puppy
   def shake_hands
   	puts "*shake hands*"
   end
+  
+  def initialize 
+  	puts "Initializing new puppy instance..."
+  end
 
 end
 
