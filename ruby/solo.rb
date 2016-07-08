@@ -26,7 +26,7 @@ def initialize(name, age, university, position)
 @country = "USA"
 end 
 
-def shoot(type)
+def practice_shot(type)
 case type
 when "dunk"
 	puts "*Slam Dunk*! 2 points!"
@@ -53,5 +53,46 @@ def block
 	puts "Not in #{name}'s house. No no no. BLOCK!"
 end
 
+end
 
+player_array = []
+
+puts "Welcome to the NBA draft combine. Before we begin, please answer the following questions."
+loop do 
+puts "What is your name?" 
+name = gets.chomp
+
+puts "How old are you?"
+age = gets.chomp.to_i
+
+puts "What college did you attend?"
+university = gets.chomp
+
+puts "What position do you play?"
+position = gets.chomp
+
+puts "Move on to the next prospect? (Y/N)"
+answer = gets.chomp
+
+baller = Basketball_Player.new(name, age, university, position)
+player_array << baller 
+if answer == "N" then 
+	break
+end
+end
+shot_type = ["dunk", "lay up", "three pointer", "other"]
+player_array.each do |player|
+	puts "PLAYER:"
+	puts player.name 
+	puts player.age
+	puts player.university
+	puts player.position
+	puts player.country
+	puts player.practice_shot(shot_type.sample)
+	puts player.pass
+	puts player.steal 
+	puts player.block 
+	puts "---------"
 end 
+
+puts "Good work. Now go get drafted!"
