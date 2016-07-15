@@ -94,3 +94,8 @@ end
 
 #=======================================================================
 # Reflection Section
+#The hash for STATE_DATA was globally overarching for all the data while the hash inside of it was a value pair and it contained local information. 
+#require_relative calls on a file created that compliments the file and is able to access data from it. Require calls upon built in data that is already installed.
+#You can iterate through a hash by calling .each do on a hash and giving it a key, value pair in the block argument. 
+#When refactoring virus_effects I saw that the variables were really repetitive and were files that should be recognized during initialization.
+#A concept that was really solidified in this GPS was being able to access data from a hash inside a hash. 
