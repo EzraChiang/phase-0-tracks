@@ -8,11 +8,21 @@
 //print out the value. 
 
 function reverse(str) {
-	Var ReversedWord = '';
+	var ReversedWord = '';
 		for (var i = str.length -1; i >= 0; i -=1) {
 		ReversedWord += str[i];
 		}
-			console.log ReversedWord;
+			console.log(ReversedWord);
+			return ReversedWord;
 }
 
-reverse('hello')
+reverse('hello');
+
+var RevWord = reverse('Pokemon');
+
+var SanDiego = true;
+var Sacramento = false;
+if (SanDiego || Sacramento) {
+	console.log(RevWord);
+}
+
