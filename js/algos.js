@@ -19,3 +19,34 @@ return longestword;
 
 var test = ["long phrase", "longest phrase", "longer phrase"];
 console.log(longest(test));
+
+
+//Release 1: Find a Key-Value Match
+//write a function that takes two objects and checks to see if the objects share at least one key-value pair. (You'll keep adding to this file, so we suggest grouping functions at the top and testing at the bottom of the file.)
+//If we called your function with {name: "Steven", age: 54} and {name: "Tamir", age: 54}, the function would return true, because at least one key-value pair matches between the two objects.
+//If no pairs match (and keep in mind that the two objects may not even have any of the same keys), the function should return false.
+//Write a function that takes two objects
+//grab the keys of the first object which becomes an array.
+//write a for loop starting at 0, setting the counter less than the array length of the first object, and adding 1 each time. 
+//write a conditional statement that takes a key of the first object and seeing if it equals the same key used for the second object. It will return true if it passes or false if it doesnt pass. 
+
+
+function finder(obj1, obj2) {
+	var key = Object.keys(obj1);
+	match = false;
+	for (i = 0; i < key.length; i++) {
+	
+		if (obj1[key[i]] == obj2[key[i]]) {match = true;
+		} else {false;
+		}
+	}
+	return match;
+}
+
+//var test1 = {name: "Steven", age: 54};
+//var test2 = {name: "Tamir", age: 54};
+var test3 = {name: "Steven", age: 54};
+var test4 = {name: "Tamir", age: 55};
+
+//console.log(finder(test1, test2));
+console.log(finder(test3, test4));
