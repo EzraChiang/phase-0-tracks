@@ -1,0 +1,132 @@
+1.
+sqlite> SELECT * FROM squad;
+1|Valor|10000|true|Moltres
+2|Mystic|8000|true|Articuno
+3|Instinct|6000|false|Zapdos
+
+2. 
+sqlite> UPDATE squad set pokemon=7000 WHERE legendary="Zapdos";
+sqlite> SELECT * FROM squad;
+1|Valor|10000|true|Moltres
+2|Mystic|8000|true|Articuno
+3|Instinct|7000|false|Zapdos
+
+sqlite> UPDATE squad set aggressive="false" WHERE pokemon >= 5000;
+sqlite> SELECT * FROM squad
+   ...> ;
+1|Valor|10000|false|Moltres
+2|Mystic|8000|false|Articuno
+3|Instinct|7000|false|Zapdos
+
+3. 
+sqlite> SELECT * FROM population, squad WHERE population.squad_id = squad.id;
+1|Ash|10|true|1|1|Valor|10000|true|Moltres
+2|Brock|11|false|2|2|Mystic|8000|true|Articuno
+3|Misty|11|true|3|3|Instinct|7000|false|Zapdos
+4|Oak|50|false|1|1|Valor|10000|true|Moltres
+5|Lance|21|true|1|1|Valor|10000|true|Moltres
+6|Yugi|14|false|2|2|Mystic|8000|true|Articuno
+7|Kaiba|16|true|3|3|Instinct|7000|false|Zapdos
+8|Joey|15|false|3|3|Instinct|7000|false|Zapdos
+9|Mai|16|true|2|2|Mystic|8000|true|Articuno
+10|Eren|17|false|1|1|Valor|10000|true|Moltres
+11|Goku|35|false|1|1|Valor|10000|true|Moltres
+12|Vegeta|33|false|2|2|Mystic|8000|true|Articuno
+13|Saitama|25|true|3|3|Instinct|7000|false|Zapdos
+
+4. 
+sqlite> SELECT population.name, squad.name FROM population JOIN squad ON populat
+ion.squad_id = squad.id;
+Ash|Valor
+Brock|Mystic
+Misty|Instinct
+Oak|Valor
+Lance|Valor
+Yugi|Mystic
+Kaiba|Instinct
+Joey|Instinct
+Mai|Mystic
+Eren|Valor
+Goku|Valor
+Vegeta|Mystic
+Saitama|Instinct
+
+5. 
+sqlite> SELECT * FROM population
+   ...> ;
+1|Ash|10|true|1
+2|Brock|11|false|2
+3|Misty|11|true|3
+4|Oak|50|false|1
+5|Lance|21|true|1
+6|Yugi|14|false|2
+7|Kaiba|16|true|3
+8|Joey|15|false|3
+9|Mai|16|true|2
+10|Eren|17|false|1
+11|Goku|35|false|1
+12|Vegeta|33|false|2
+13|Saitama|25|true|3
+sqlite> DELETE FROM population where age >= 25;
+sqlite> SELECT * FROM population;
+1|Ash|10|true|1
+2|Brock|11|false|2
+3|Misty|11|true|3
+5|Lance|21|true|1
+6|Yugi|14|false|2
+7|Kaiba|16|true|3
+8|Joey|15|false|3
+9|Mai|16|true|2
+10|Eren|17|false|1
+
+RELEASE 3:
+
+sqlite> SELECT population.android, squad.aggressive FROM population INNER JOIN s
+quad ON population.squad_id = squad.id;
+true|true
+false|true
+true|false
+true|true
+false|true
+true|false
+false|false
+true|true
+false|true
+
+
+sqlite> SELECT population.name, squad.name FRom population LEFT JOIN squad ON po
+pulation.squad_id = squad.id;
+Ash|Valor
+Brock|Mystic
+Misty|Instinct
+Lance|Valor
+Yugi|Mystic
+Kaiba|Instinct
+Joey|Instinct
+Mai|Mystic
+Eren|Valor
+Lance|Valor
+Yugi|Mystic
+Kaiba|Instinct
+Joey|Instinct
+Mai|Mystic
+Eren|Valor
+Goku|Valor
+Vegeta|Mystic
+Saitama|Instinct
+
+sqlite> SELECT population.name, population.age, squad.name, squad.legendary FROM
+ population JOIN squad ON population.squad_id = squad.id;
+Ash|10|Valor|Moltres
+Brock|11|Mystic|Articuno
+Misty|11|Instinct|Zapdos
+Oak|50|Valor|Moltres
+Lance|21|Valor|Moltres
+Yugi|14|Mystic|Articuno
+Kaiba|16|Instinct|Zapdos
+Joey|15|Instinct|Zapdos
+Mai|16|Mystic|Articuno
+Eren|17|Valor|Moltres
+Goku|35|Valor|Moltres
+Vegeta|33|Mystic|Articuno
+Saitama|25|Instinct|Zapdos
