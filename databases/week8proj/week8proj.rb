@@ -15,3 +15,6 @@ SQL
 
 ws.execute(create_table_spending)
 
+def create_spending(ws, item, quanity, price, refrigerated)
+	db.execute("INSERT INTO weekly_spending (item, quantity, price, refrigerated) VALUES (?, ?, ?, ?)", [item, quantity, price, refrigerated])
+end
