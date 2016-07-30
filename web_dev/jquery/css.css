@@ -1,0 +1,27 @@
+body {
+	max-width: 960px;
+	background-color: gray;
+	font-size: 12px;
+	font-family: sans-serif;
+	line-height: 1.5;
+	text-align: left;
+}
+
+#div1 {
+	background-color: blue;
+	font-size: 15px;
+	color: black;
+	border-radius: 10px;
+	text-align: center;
+	margin: 25px;
+	padding: 25px;
+}
+
+#div2 {
+	
+	font-size: 15px;
+	text-align: center;
+}
+
+
+}
