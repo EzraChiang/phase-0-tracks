@@ -1,0 +1,13 @@
+<!Doctype html>
+<html>
+<head>
+	<title>Most popular campuses</title>
+</head>
+<body>
+<ul>
+    <% @campusdata.each do |campus| %>
+      <li><%= campusdata['name'] %></li>
+    <% end %>
+  </ul>
+</body>
+</html>
